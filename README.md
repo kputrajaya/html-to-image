@@ -15,7 +15,7 @@ Requirements
 
 - [jQuery](http://jquery.com/download/)
 - [FileSaver.js](https://github.com/eligrey/FileSaver.js/)
-- [JSZip.js](http://stuk.github.io/jszip/) (if you opt to download images as zip)
+- [JSZip.js](http://stuk.github.io/jszip/) (if you choose to download the images as zip, which is true by default)
 
 
 Simple Usage
@@ -37,20 +37,21 @@ You can pass optional parameter when downloading elements as images. Written bel
 		imageNamePrefix: 'image-', // each image name, will be followed with number (1 .. n)
 		debug: false // if set to true, log will be written in console
 	};
+
 	$('.download').downloadAsImage(options);
 
 You can also set individual filename for each image by giving each element `data-filename` attribute.
 
 	<div data-filename="text.png"></div>
 
-The element above will be downloaded as text.png as specified.
+The element above will be downloaded as `text.png` as specified. Note that the attribute will override the existing naming convention (`imageNamePrefix{number}.png`).
 
 
 Important Note
 --------------
 
 - This plugin hasn't been tested thoroughly as this was created for a specific personal use.
-- SVG doesn't seem to support adding `<img>` to `<foreignObject>` so currently, `<img>` are being processed individually: drawn to canvas one-by-one then removing it. Expect problems if converted element contains any `<img>` tags.
+- SVG doesn't seem to support adding `<img>` to `<foreignObject>`, so currently they're being processed separately: drawn to canvas one-by-one then removing it. Expect problems if converted element contains any `<img>` tags.
 
 
 Feedback
