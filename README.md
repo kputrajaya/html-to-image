@@ -52,9 +52,3 @@ Important Note
 
 - This plugin hasn't been tested thoroughly as this was created for a specific personal use.
 - SVG doesn't seem to support adding `<img>` to `<foreignObject>`, so currently they're being processed separately: drawn to canvas one-by-one then removing it. Expect problems if converted element contains any `<img>` tags.
-
-
-Feedback
---------
-
-Any feedback would be very appreciated, kindly send an email to [freakperzon@yahoo.com](mailto:freakperzon@yahoo.com) and I'll respond to it ASAP.
