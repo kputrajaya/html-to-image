@@ -1,13 +1,13 @@
 HTML-to-Image.js
 ================
 
-A jQuery plugin that allows downloading HTML elements as (zipped) image files. Images downloaded are in PNG format and they do support transparency.
+A jQuery plugin that allows downloading HTML elements as (zipped) image files. Images are in PNG format, transparency supported.
 
 
 Implementation
 --------------
 
-This plugin embeds the HTML element to an SVG object, then draw it to HTML5 canvas element. Image data is obtained afterwards using `canvas.toDataUrl()` method.
+This plugin embeds the HTML element to an SVG object, then draws it into a canvas. Image data is obtained afterwards using `canvas.toDataUrl()` method.
 
 
 Requirements
@@ -35,7 +35,7 @@ You can pass optional parameter when downloading elements as images. Written bel
 		zip: true, // download images as zip file
 		zipName: 'images.zip', // filename for output zip file
 		imageNamePrefix: 'image-', // each image name, will be followed with number (1 .. n)
-		debug: false // if set to true, log will be written in console
+		debug: false // if set to true, debugging log will appear in console
 	};
 
 	$('.download').downloadAsImage(options);
@@ -44,7 +44,7 @@ You can also set individual filename for each image by giving each element `data
 
 	<div data-filename="text.png"></div>
 
-The element above will be downloaded as `text.png` as specified. Note that the attribute will override the existing naming convention (`imageNamePrefix{number}.png`).
+The element above will be downloaded as `text.png` as specified. Note that said attribute will override the existing naming convention (`imageNamePrefix{number}.png`).
 
 
 Important Note
