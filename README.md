@@ -1,27 +1,24 @@
 # HTML to Image
 
-jQuery plugin that converts HTML to downloadable image. 
+jQuery plugin that converts HTML to downloadable image.
 
+## Built With
+
+- [Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+- [jQuery](http://jquery.com/download/) (Prerequisite)
+- [FileSaver.js](https://github.com/eligrey/FileSaver.js/) (Prerequisite)
+- [JSZip.js](http://stuk.github.io/jszip/) (Prerequisite, if downloading as ZIP)
 
 ## Implementation
 
 This plugin embeds the HTML element to an SVG object, then draws it into a canvas.
 Image data is obtained afterwards using `canvas.toDataUrl()` method.
 
-
-## Requirements
-
-- [jQuery](http://jquery.com/download/)
-- [FileSaver.js](https://github.com/eligrey/FileSaver.js/)
-- [JSZip.js](http://stuk.github.io/jszip/) (if you choose to download the images as zip, which is true by default)
-
-
 ## Simple Usage
 ```
 $('.download').downloadAsImage();
 ```
 This is the simplest usage to download HTML elements as images.
-
 
 ## Advanced Usage
 
@@ -40,7 +37,6 @@ Note that said attribute will override default numbered filename.
 ```
 <div data-filename="text.png"></div>
 ```
-
 
 ## Important Note
 
